@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Data Fetching</title>
+<style>
+button { margin: 5px; }
+pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+</style>
+</head>
+<body>
+<h2>Fetch Data from PHP API</h2>
+<button id="getJson">Get JSON</button>
+<button id="getXml">Get XML</button>
+<pre id="output"></pre>
+<script>
+document.getElementById("getJson").addEventListener("click", () => {
+fetch("api.php?format=json")
+.then(response => response.json())
+.then(data => {
+document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+});
+});
+document.getElementById("getXml").addEventListener("click", () => {
+fetch("api.php?format=xml")
+.then(response => response.text())
+.then(data => {
+document.getElementById("output").textContent = data;
+});
+});
+</script>
+</body>
+</html>

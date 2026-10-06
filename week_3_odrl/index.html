@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ODRL Policy Evaluation</title>
+<script>
+function sendODRLPolicy() {
+const policy = document.getElementById("policy").value;
+const xhr = new XMLHttpRequest();
+xhr.open("POST", "odrl_evaluate.php", true);
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhr.onreadystatechange = function () {
+if (xhr.readyState == 4 && xhr.status == 200) {
+document.getElementById("result").innerHTML = xhr.responseText;
+}
+};
+xhr.send("policy=" + encodeURIComponent(policy));
+}
+</script>
+</head>
+<body>
+<h2>Submit ODRL Policy for Evaluation</h2>
+<textarea id="policy" rows="10" cols="50">
+<o:Policy xmlns:o="http://www.w3.org/ns/odrl/2/">
+<o:permission>
+<o:action o:ref="use"/>
+</o:permission>
+</o:Policy>
+</textarea>
+<br>
+<button type="button" onclick="sendODRLPolicy()">Submit Policy</button>
+<h3>Evaluation Result:</h3>
+<div id="result"></div>
+</body>
+</html>
