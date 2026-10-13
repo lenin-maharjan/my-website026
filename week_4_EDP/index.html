@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Driven Programming Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Event-Driven Programming Demo</h1>
+
+    <div class="container">
+        <h2>Submit Your Message</h2>
+
+        <label for="inputField">Message</label>
+        <input type="text" id="inputField"
+               placeholder="Type something..." autocomplete="off">
+
+        <button id="submitBtn">Submit</button>
+
+        <p id="output" class="feedback" aria-live="polite">Your message will appear here.</p>
+        <p id="errorMessage" class="error-message" role="alert" aria-live="assertive"></p>
+    </div>
+
+    <div class="container">
+        <h2>Event Delegation</h2>
+
+        <button id="addBtn">Add New Button</button>
+
+        <div id="buttonContainer" aria-live="polite"></div>
+
+        <p id="delegationOutput" class="feedback" aria-live="polite">
+            Click a new button to test it.
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>Observer Pattern</h2>
+
+        <p id="observerOne" class="observer">Observer 1: Waiting for input...</p>
+        <p id="observerTwo" class="observer">Observer 2: Waiting for input...</p>
+    </div>
+
+    <div class="container">
+        <h2>Copy Prevention Test</h2>
+
+        <p id="protectedText" class="protected-text">
+            Try selecting or copying this text to test Task 6.
+        </p>
+        <p id="copyStatus" class="feedback" aria-live="polite">
+            Selection and copying are disabled for the protected text.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

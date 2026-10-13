@@ -1,0 +1,100 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f5fa;
+    text-align: center;
+    margin: 0;
+    padding: 30px 15px;
+    color: #263238;
+}
+
+h1 {
+    color: #263d70;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+input {
+    padding: 10px;
+    width: 60%;
+    max-width: 300px;
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3459a5;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #243e79;
+}
+
+#buttonContainer {
+    margin-top: 15px;
+}
+
+#output,
+#delegationOutput {
+    margin-top: 20px;
+    padding: 10px;
+    overflow-wrap: anywhere;
+    background-color: #f0f3f9;
+    border-radius: 5px;
+}
+
+.feedback {
+    min-height: 20px;
+}
+
+.error-message {
+    min-height: 20px;
+    margin: 10px 0 0;
+    color: #b42318;
+    font-weight: bold;
+}
+
+.observer {
+    padding: 12px;
+    background-color: #e7f5ed;
+    border-radius: 5px;
+}
+
+.dynamic-button {
+    background-color: #6d3ba8;
+}
+
+.dynamic-button:hover {
+    background-color: #4f287d;
+}
+
+.protected-text {
+    user-select: text;
+    cursor: text;
+}
+
+@media (max-width: 480px) {
+    input {
+        width: 90%;
+    }
+}
